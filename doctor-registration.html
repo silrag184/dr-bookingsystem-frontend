@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration - BanglaDoctor</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark">
+        <div class="container">
+            <a class="navbar-brand" href="index.html">BanglaDoctor</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="patient-auth.html">Login/Register</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Registration Form -->
+    <section class="py-5">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-md-8">
+                    <h2 class="text-center mb-4">Doctor Registration</h2>
+                    <form class="needs-validation" novalidate>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="name" class="form-label">Full Name</label>
+                                <input type="text" class="form-control" id="name" required>
+                                <div class="invalid-feedback">Please provide your full name.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" required>
+                                <div class="invalid-feedback">Please provide a valid email.</div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6 mb-3">
+                                <label for="password" class="form-label">Password</label>
+                                <input type="password" class="form-control" id="password" required>
+                                <div class="invalid-feedback">Please provide a password.</div>
+                            </div>
+                            <div class="col-md-6 mb-3">
+                                <label for="specialization" class="form-label">Specialization</label>
+                                <select class="form-control" id="specialization" required>
+                                    <option value="">Select Specialization</option>
+                                    <option value="cardiology">Cardiology</option>
+                                    <option value="dermatology">Dermatology</option>
+                                    <option value="neurology">Neurology</option>
+                                    <option value="orthopedics">Orthopedics</option>
+                                </select>
+                                <div class="invalid-feedback">Please select a specialization.</div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="address" class="form-label">Chamber Address</label>
+                            <textarea class="form-control" id="address" rows="3" required></textarea>
+                            <div class="invalid-feedback">Please provide your chamber address.</div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-4 mb-3">
+                                <label for="fee" class="form-label">Consultation Fee (BDT)</label>
+                                <input type="number" class="form-control" id="fee" required>
+                                <div class="invalid-feedback">Please provide consultation fee.</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="days" class="form-label">Available Days</label>
+                                <select class="form-control" id="days" multiple required>
+                                    <option value="monday">Monday</option>
+                                    <option value="tuesday">Tuesday</option>
+                                    <option value="wednesday">Wednesday</option>
+                                    <option value="thursday">Thursday</option>
+                                    <option value="friday">Friday</option>
+                                    <option value="saturday">Saturday</option>
+                                    <option value="sunday">Sunday</option>
+                                </select>
+                                <div class="invalid-feedback">Please select available days.</div>
+                            </div>
+                            <div class="col-md-4 mb-3">
+                                <label for="time" class="form-label">Available Time</label>
+                                <input type="text" class="form-control" id="time" placeholder="e.g., 9 AM - 5 PM" required>
+                                <div class="invalid-feedback">Please provide available time.</div>
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary w-100">Register</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4">
+                    <h5>Contact Us</h5>
+                    <div class="contact-item">
+                        <a href="https://www.linkedin.com/company/bangladoctor" target="_blank" class="linkedin-link">
+                            <i class="fab fa-linkedin"></i> info@bangladoctor.com
+                        </a>
+                    </div>
+                    <div class="contact-item">
+                        <p>Phone: +880 123 456 7890</p>
+                    </div>
+                </div>
+                <div class="col-md-4">
+                    <h5>Quick Links</h5>
+                    <ul class="quick-links">
+                        <li><a href="#about">About Us</a></li>
+                        <li><a href="#terms">Terms & Conditions</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-4">
+                    <h5>Subscribe</h5>
+                    <form class="subscribe-form" action="#" method="post">
+                        <input type="email" placeholder="Enter email" required>
+                        <button type="submit">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>&copy; 2023 BanglaDoctor Appointment Management</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Bootstrap form validation
+        (function () {
+            'use strict'
+            const forms = document.querySelectorAll('.needs-validation')
+            Array.prototype.slice.call(forms)
+                .forEach(function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (!form.checkValidity()) {
+                            event.preventDefault()
+                            event.stopPropagation()
+                        }
+                        form.classList.add('was-validated')
+                    }, false)
+                })
+        })()
+    </script>
+</body>
+</html>
